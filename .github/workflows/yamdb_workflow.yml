@@ -75,6 +75,7 @@ jobs:
             echo EMAIL_PORT=${{ secrets.EMAIL_PORT }} >> .env
             echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
             echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_actions:latest
             sudo docker-compose up -d
 
   send_message:
