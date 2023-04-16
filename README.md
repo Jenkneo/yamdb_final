@@ -74,6 +74,7 @@ sudo docker-compose exec web python manage.py collectstatic --no-input
 ```
 2. Примените миграции.
 ```
+sudo docker-compose exec web python manage.py makemigrations reviews
 sudo docker-compose exec web python manage.py makemigrations
 sudo docker-compose exec web python manage.py migrate --noinput
 ```
@@ -106,3 +107,6 @@ sudo docker-compose exec web python manage.py createsuperuser
 - [Алексей](https://github.com/alekseikogan)
 - [Евгений](https://github.com/Jenkneo)
 - [Екатерина](https://github.com/katiefrompiter)
+
+## Адрес тестового проекта
+[Yandex Cloud](http://158.160.14.36/redoc/) 
