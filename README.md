@@ -43,7 +43,6 @@ DB_PASSWORD - Пароль пользователя базы данных (На�
 DOCKER_USERNAME - Логин от DockerHub
 DOCKER_PASSWORD - Пароль от DockerHub
 
-
 EMAIL_HOST - Хост сервера почты (Пример - smtp.gmail.com) 
 EMAIL_PORT - Порт сервера почты (Пример - 587) 
 EMAIL_HOST_USER - Почта сервера (Пример - server_mail@gmail.com) 

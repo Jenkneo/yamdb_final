@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: | 
           python -m pip install --upgrade pip 
-          pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
+          pip install -r requirements_testing.txt
           pip install -r api_yamdb/requirements.txt
       - name: Test with flake8 and pytest
         run: |
@@ -67,6 +67,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo rm .env
             touch .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
             echo POSTGRES_USER=${{ secrets.DB_USER }} >> .env
