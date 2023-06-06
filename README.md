@@ -1,22 +1,31 @@
-![example workflow](https://github.com/jenkneo/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
-
-# Проект 16 спринта: CI и CD проекта api_yamdb
+# YaMDb API: CI и CD проекта
 ## Описание проекта
 
-Проект для публикаций отзывов пользователей на произведения.
-
+Проект для публикаций отзывов пользователей на произведения. 
 Читатели оставляют к произведениям текстовые отзывы и выставляют рейтинг.
-
 Полная документация к API находится по эндпоинту: /redoc
+```      
+⚠️ Проект идет исключительно как API, фронта нет
+```
+
+## Технологии
+<img src="https://img.shields.io/badge/Python%203.7-grey?style=for-the-badge&logo=Python&logoColor=Blue">
+<img src="https://img.shields.io/badge/Django%203.2-grey?style=for-the-badge&logo=Django&logoColor=darkgreen">
+<img src="https://img.shields.io/badge/DRF%203.12.4-grey?style=for-the-badge&logo=Django&logoColor=white">
+<img src="https://img.shields.io/badge/Gunicorn%2020.0.4-grey?style=for-the-badge&logo=Gunicorn&logoColor=green">
+<img src="https://img.shields.io/badge/Nginx%201.21.3-grey?style=for-the-badge&logo=Nginx&logoColor=black">
+<img src="https://img.shields.io/badge/PostgreSQL%2013.0-grey?style=for-the-badge&logo=PostgreSQL&logoColor=Blue">
+<img src="https://img.shields.io/badge/Docker%2020.10.23-grey?style=for-the-badge&logo=Docker&logoColor=Blue">
+<img src="https://img.shields.io/badge/Docker Compose%202.15.1-grey?style=for-the-badge&logo=Docker&logoColor=Blue">
 
 
 ## Подготовка проекта
 
-1. Клонируйте репозиторий:
+1. 🔽 Клонируйте репозиторий:
 ```      
 git clone https://github.com/Jenkneo/yamdb_final
 ```
-2. Настройте удаленный сервер:
+2. 👨🏻‍💻 Настройте удаленный сервер:
 ```
 # Создайте в домашней директории папку nginx
 mkdir nginx
@@ -26,7 +35,11 @@ sudo apt install docker.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-3. Отправьте необходимые данные на сервер:
+3. ✏️ Отредактируйте docker-compose.yaml (15 строка):
+```
+image: <ваш-dockerhub>/yamdb_final:latest
+```
+4. ☁ Отправьте необходимые данные на сервер:
 ```
 # Скопируйте docker-compose.yaml в домашнюю директорию сервера
 scp -rv C:\<путь_до_файла>\docker-compose.yaml <ваш_username>@<ip_сервера>:/home
@@ -34,7 +47,7 @@ scp -rv C:\<путь_до_файла>\docker-compose.yaml <ваш_username>@<ip_
 # Скопируйте default.conf в созданную папку nginx
 scp -rv C:\<путь_до_файла>\nginx\default.conf <ваш_username>@<ip_сервера>:/home/nginx
 ```
-4. В репозитории на github добавьте secret данные. `Settings - Secrets and variables - Actions`:
+5. ⚙️ В репозитории на github добавьте secret данные. `Settings - Secrets and variables - Actions`:
 ```
 DB_NAME - Имя базы данных (Например - postgres)
 DB_USER - Имя пользователя базы данных (Например - postgres)
@@ -57,55 +70,37 @@ TELEGRAM_TO - id вашего Telegram аккаунта
 ```
 
 ## Запуск проекта
-1. Запушьте свой проект на github:
+1. 🔼 Запушьте свой проект на github:
 ```
 git push
 ```
-2. Немного подождите когда проект задеплоится на сервер.
-3. Проверьте работоспособность проекта перейдя по адресу сервера в браузере.
+2. ⌛ Немного подождите когда проект задеплоится на сервер.
+3. ✅ Проверьте работоспособность проекта перейдя по адресу сервера в браузере.
 ```
-http://<server_ip>/admin
+http://<server_ip>/redoc
 ```
 ## Донастройка проекта
-1. Подключитесь по ssh и соберите статистические файлы:
+1. 🔗 Подключитесь по ssh и соберите статистические файлы:
 ```
 sudo docker-compose exec web python manage.py collectstatic --no-input
 ```
-2. Примените миграции.
+2. ⚙️ Примените миграции.
 ```
 sudo docker-compose exec web python manage.py makemigrations reviews
 sudo docker-compose exec web python manage.py makemigrations
 sudo docker-compose exec web python manage.py migrate --noinput
 ```
-3. Создайте суперпользователя.
+3. ⚙️ Создайте суперпользователя.
 ```
 sudo docker-compose exec web python manage.py createsuperuser
 ```
 
-## Технологии
-### Python
-- Python 3.7-slim
-- Django 3.2
-- Django Rest Framework 3.12.4
-- Gunicorn 20.0.4
-
-### Сервер
-- Nginx 1.21.3
-
-### База данных
-- PostgreSQL 13.0
-
-### Контейнер
-- Docker 20.10.23
-- Docker Compose 2.15.1
-
-## О проекте
-Идея проекта - [Яндекс Практикум](https://practicum.yandex.ru/) 
-
 ### Разработчики:
+
 - [Алексей](https://github.com/alekseikogan)
 - [Евгений](https://github.com/Jenkneo)
 - [Екатерина](https://github.com/katiefrompiter)
 
-## Адрес тестового проекта
-[Yandex Cloud](http://158.160.14.36/redoc/) 
+### Идея проекта - [Яндекс Практикум](https://practicum.yandex.ru/) 
+
+

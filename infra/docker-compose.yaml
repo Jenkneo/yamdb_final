@@ -9,6 +9,9 @@ services:
       - ./.env
 
   web:
+#    build:
+#      context: ../api_yamdb
+#      dockerfile: Dockerfile
     image: jenkneo/yamdb_final:latest
     restart: always
     volumes:
