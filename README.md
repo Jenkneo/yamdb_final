@@ -9,14 +9,7 @@
 ```
 
 ## Технологии
-<img src="https://img.shields.io/badge/Python%203.7-grey?style=for-the-badge&logo=Python&logoColor=Blue">
-<img src="https://img.shields.io/badge/Django%203.2-grey?style=for-the-badge&logo=Django&logoColor=darkgreen">
-<img src="https://img.shields.io/badge/DRF%203.12.4-grey?style=for-the-badge&logo=Django&logoColor=white">
-<img src="https://img.shields.io/badge/Gunicorn%2020.0.4-grey?style=for-the-badge&logo=Gunicorn&logoColor=green">
-<img src="https://img.shields.io/badge/Nginx%201.21.3-grey?style=for-the-badge&logo=Nginx&logoColor=black">
-<img src="https://img.shields.io/badge/PostgreSQL%2013.0-grey?style=for-the-badge&logo=PostgreSQL&logoColor=Blue">
-<img src="https://img.shields.io/badge/Docker%2020.10.23-grey?style=for-the-badge&logo=Docker&logoColor=Blue">
-<img src="https://img.shields.io/badge/Docker Compose%202.15.1-grey?style=for-the-badge&logo=Docker&logoColor=Blue">
+<img src="https://img.shields.io/badge/Python%203.7-grey?style=for-the-badge&logo=Python&logoColor=Blue"><img src="https://img.shields.io/badge/Django%203.2-grey?style=for-the-badge&logo=Django&logoColor=darkgreen"><img src="https://img.shields.io/badge/DRF%203.12.4-grey?style=for-the-badge&logo=Django&logoColor=white"><img src="https://img.shields.io/badge/Gunicorn%2020.0.4-grey?style=for-the-badge&logo=Gunicorn&logoColor=green"><img src="https://img.shields.io/badge/Nginx%201.21.3-grey?style=for-the-badge&logo=Nginx&logoColor=black"><img src="https://img.shields.io/badge/PostgreSQL%2013.0-grey?style=for-the-badge&logo=PostgreSQL&logoColor=Blue"><img src="https://img.shields.io/badge/Docker%2020.10.23-grey?style=for-the-badge&logo=Docker&logoColor=Blue"><img src="https://img.shields.io/badge/Docker Compose%202.15.1-grey?style=for-the-badge&logo=Docker&logoColor=Blue">
 
 
 ## Подготовка проекта
